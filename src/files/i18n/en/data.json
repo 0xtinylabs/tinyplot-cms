@@ -1,0 +1,155 @@
+{
+    "bot": {
+        "loading": {
+            "calling": "I am thinking"
+        },
+        "guide": "1. What is TinyPilot?\n\nTinyPilot is a natural language based super agent that helps you analyze Based tokens and wallets, manage funds, and execute onchain trades — all via chat inside Telegram.\n\n 2. Is TinyPilot safe to use?\n\nTinyPilot uses custodial wallets for trading. While the system is secure, never share your private key. Currently, TinyPilot is in alpha; it might crash or provide incorrect data. Always DYOR (Do Your Own Research), store securely your private key and use small amounts at first.\n\n 3. What networks are supported?\n\nOnly the Base network is supported for now.\n\n 4. What can I do with TinyPilot?\n\n- Analyze token and wallet data\n- Create and manage a trader wallet\n- Deposit, withdraw, and send funds\n- Buy, sell, and swap tokens\n- Invite others via referral links and earn rewards\n\n 5. How do I get started?\n\nUse `/create_wallet` to generate your unique custodial trader wallet. Without a wallet, you can't place trade orders — but you can still analyze tokens and wallets.\n\n 6. Can I have more than one wallet?\n\nNo. Each Telegram user can only have one wallet. Re-creation is not allowed yet.\n\n 7. Do I need to use commands all the time?\n\nEach command unlocks a different mode that activates specific data access. \nFor example: \n`/start` allows you to integrate the bot and access the quick menu.\n`/create_wallet`  allows you to create a new wallet if you haven’t already.\n`/my_wallet` allows you to access your wallet address and private key.\n`/my_portfolio` allows you to access the assets you hold in your wallet.\n`/manage_wallet` allows you to perform deposit and withdraw transactions.\n`/token_data` allows you to access detailed insights about the token based on the ticker or contract address you provide.\n`/execute_trades` allows you to buy, sell, and swap tokens.\n`/wallet_data` allows you to access detailed information about the ENS name, wallet address, or Farcaster username you provide.\n`/my_referral` allows you to access the usage statistics of your referral link.\n`/security_check` allows you to access a detailed security analysis of any token ticker or contract address you provide.\n\n 8. Where can I find my wallet address or my wallet’s private key?\n\nUse the /my_wallet command to view your address and its private key..\n\n 9. Can I view my wallet’s transaction history?\n\nYes. Use `/my_wallet` command. You'll get the BaseScan link of your wallet.\n\n 10. How can I deposit funds into my wallet?\n\nUse `/my_wallet` to receive your deposit address. We recommend depositing ETH to cover network fees.\n\n 11. Can I send tokens to others?\n\nYes. You can send tokens to:\n\n- Wallet address (e.g., `0x123...456`)\n- ENS name (e.g., `tinylabs.eth`)\n- Farcaster username (e.g., `yourfriend`)\n- Telegram username (e.g., `@yourfriend`)\n\n 12. Can I withdraw my funds?\n\nYes. You can withdraw at any time. A quick reminder that TinyPilot does not support cross-chain transfers.\n\n 13. What token-related questions can I ask?\n\n- “What is $TOKEN’s price?”\n- “Show $TOKEN’s MCAP, FDV, and liquidity.”\n- “How did $TOKEN perform in the last 24h?”\n- “Who are the top 10 holders of $TOKEN?”\n- “What’s $TOKEN’s Uniswap/GeckoTerminal link?”\n\n 14. What wallet-related questions can I ask?\n\n- “Does jessepollak.eth hold $TOKEN?”\n- “Show sencrazy.eth’s top trades this week.”\n- “What’s the portfolio value of 0x123…45?”\n\n 15. How do I buy tokens?\n\nUse `/execute_trades` and say:\n\n- “Buy 100 $TOKEN”\n- “Buy $100 worth of $TOKEN”\n- “Buy $TOKEN with 25% of my ETH”\n\n 16. How do I sell tokens?\n\nUse `/execute_trades` and say:\n\n- “Sell 100 $TOKEN”\n- “Sell $TOKEN worth $50”\n\n 17. How do I swap tokens?\n\nUse `/execute_trades` and say:\n\n- “Swap 100 $TOKENA to $TOKENB”\n- “Swap 50% of my $TOKEN to $TOKENB”\n\n 18. How do referrals work?\n\nEach user has a unique invite link. When someone joins via your link:\n\n- You earn 30% of their trading fees\n- They get a 10% fee discount (1% → 0.9%)\n\n 19. What’s the reward breakdown?\n\n- Fren 1: 30%\n- Fren 2: 4%\n- Fren 3: 3%\n- Fren 4: 2%\n- Fren 5: 1%\n\n 20. Can I change my referral code?\n\nNo. Once set, your referral code is permanent.\n\n 21. What’s the minimum reward I need to claim referral earnings?\n\nMinimum claimable reward is `0.1 WETH`.\n\n 22. Which 3rd party data providers does TinyPilot use?\n\n- CoinGecko\n- Birdeye\n- Moralis\n- Neynar\n- ClankFun\n\n 23. I encountered an error. What should I do?\n\nRetry later, and if you continue to experience the same issue, contact support through the TinyLabs community: https://t.me/tinylabscommunity\n\n 24. Can I use TinyPilot in my group chat?\n\nYes! TinyPilot works in group chats as well as DMs. In groups, it can respond to queries using the same command system. However, TinyPilot has limited features for group chat usage.\n\n 25. Can I add TinyPilot in my group chat?\n\nAbsolutely. Add the bot like any other Telegram bot.\n\n 26. Who has access to my Trader Wallet?\n\nOnly you have access to your Trader Wallet. The wallet is created and mapped to your Telegram ID. No one else can access it unless you share your private key. Your private keys are encrypted and stored securely.\n\n 27. Where is my private key stored?\n\nThe private key is securely encrypted and is only shared with you if explicitly requested.\n\n 28. What happens if I delete the bot or clear chat?\n\nYour wallet remains intact and recoverable via your Telegram account. Deleting chat history does not delete your wallet or data.\n\n 29. What happens if I delete or lost my Telegram account?\n\nYour wallet remains intact and recoverable via your Telegram account. Deleting or losing your Telegram account will cut off access to your wallet. That’s why we suggest revealing your private key and storing it securely to maintain access to your wallet without TinyPilot.\n\n 30. Why is my trade/query taking longer than expected?\n\nThis may occur due to Base network congestion or gas fluctuations. All transactions or queries go through validation, signature, submission, and confirmation steps.\n\n 31. Does TinyPilot support other languages?\n\nCurrently, English is the default supported language. More language support will be introduced in future versions.\n\n 32. How can I follow product updates? Are there any official social links for the project?\n\nTinyPilot is built by TinyLabs. TinyLabs is a venture studio that builds on-chain AI products. Here are our official links where you can reach us or follow to stay updated:\n\nX: https://x.com/0xtinylabs \n\nTelegram: https://t.me/tinylabscommunity \n\nFarcaster: https://warpcast.com/tinylabs",
+        "bot_description": "🎊 Welcome to TinyPilot – Your AI Trading Assistant\n\nTinyPilot is your personal AI super agent built for on-chain trading and analysis — right here in Telegram.\n\nJust chat with it like you would with a friend, and it can help you:\n\n📊 Fetch on-chain data on any token or wallet\n\n🔄 Trade tokens directly via chat\n\n🎁 Share your referral link and earn rewards across 5 tiers",
+        "welcome_message": "GM ser! I'm here to assist you with on-chain trading and analysis — right here on Telegram.\n\nJust chat with me like you would with a friend, and I'll help you. I'm always on, always learning, and built to help you trade smarter and faster — all through natural language. \n\nAsk anything like:\n\n➡️ “Buy $SMOL with 0.1 ETH”\n\n➡️ “Swap my entire $ETH holding to $DRB”\n\n➡️ “Does vitalik.eth hold $CLANKER?”\n\n➡️ “Which tokens did jessepollak buy today?”\n\n➡️ “Send 1K $SMOL to @yourfriend”\n\n➡️ “What is $DRB's 24h trading performance?”\n\n⚠️ TinyPilot is in the alpha version. It might crash, make mistakes, or provide incorrect data. Always DYOR and try with a small balance.",
+        "wallet": {
+            "portfolio": "📋 Your Portfoli Details\n\n🔹 Portfoliox Value\n💰 ${total_amount}\n\n🔹Top Holdings\n\n{top_holdings}\nYou can view your full transaction history on Basescan:\n\n🔗 View on Basescan: {basescan_link}",
+            "create_label": "Create Trader Wallet",
+            "private_keys_label": "Reveal Private Keys",
+            "delete_private_key_label": "Delete Private Key",
+            "exist_wallet": "You already have a Trader Wallet linked to your account. Each user can only have one Trader Wallet.",
+            "private_key": "⚠️ Warning: Your private key gives full access to your Trader Wallet. Never share it with anyone and delete this message after copying your private key!\n\n{private_key}",
+            "info": "⚠️ Warning: Your private key gives full access to your Trader Wallet. Never share it with anyone!\n\nYour trader wallet creation is complete. When you deposit $ETH into this wallet on the Base network, I’ll be ready to start trading for you.\n\nThe minimum deposit amount is 0.01 $ETH. You can always withdraw your funds from this wallet or reveal the private key of this wallet.\n\n{basescan_link}\n\n{wallet_address}",
+            "errors": {
+                "wallet_portfolio_empty": "Analysis of {wallet_address}\n\n🔹 Portfolio Value\n\n💰 $0.00 – No activity in the last 24h\n\n🔹 Top Holdings\n\nThere are currently no assets in this wallet.\n\n📭 Looks like this wallet is empty. Once you start trading or receive funds, your holdings will show up here.\n\nYou can still view your transaction history on Basescan:\n\n🔗 View on Basescan: {basescan_link}",
+                "wallet_create": "An error occurred while creating your Trader Wallet. Please try again later or contact support."
+            }
+        },
+        "modes": {
+            "deposit_manuel": "To make deposit this is your wallet address:",
+            "invalid_prompt": "This mode does not support the question: {question}\n\nPlease use the correct mode."
+        },
+        "extras": {
+            "greetings": {
+                "guide_book": "I got you! Here is our guidebook where you can learn more about TinyPilot, how to use it more efficiently, and find some prompt examples to improve your communication with TinyPilot:\n\n{guidebook_link}",
+                "withdraw_funds": "Got it, ser. Just give me these withdrawal details in a single message:\n\n1. Where do you want to withdraw to?\n2. Which asset do you want to withdraw?\n3. How much do you want to withdraw?"
+            }
+        },
+        "menu": {
+            "start": "Start to integrate with bot",
+            "create_wallet": "Create a trader wallet",
+            "my_wallet": "Get your wallet info",
+            "manage_wallet": "Deposit and withdraw funds",
+            "token_data": "Get advance token data",
+            "wallet_data": "Get advance wallet data",
+            "execute_trades": "Let AI trade for you",
+            "my_referral": "Share your referral link",
+            "my_portfolio": "Check your wallet portfolio",
+            "security_check": "Audit check a token",
+            "my_account": "Your TinyPilot Account Dashboard",
+            "trending_tokens": "Top and Hot Clanker tokens",
+            "greetings": {
+                "trending_tokens": "🤑 TOP Clanker Tokens (24h)\n\n{trending_tokens}\n\n🔥 HOT Clanker Tokens (24h)\n\n{hot_tokens}\n\nℹ️ This curated list is powered by ClankFun based on on-chain token data. Always DYOR before ape in.",
+                "my_referral": "📊 Referral Earnings Breakdown\n\nFren 1 (Direct Invites): {count}\n\nFren 2: {count}\n\nFren 3: {count}\n\nFren 4: {count}\n\nFren 5: {count}\n\nTotal Earnings: {total_rewards} WETH\n\nClaimable Rewards: {claimable_rewards} WETH\n\nClaimed Rewards: {claimed_rewards} WETH",
+                "manage_wallet": "Got it ser, wallet management mode: activated! What would you like to do? Deposit or withdraw? 👀",
+                "token_data": "Ready to dive into the data depths! Which token’s got your attention?",
+                "wallet_data": "Need to peek inside a wallet! Drop the address, ENS name, or Farcaster username and let’s snoop.",
+                "execute_trades": "I'm ready to hit that swap button, ser! Tell me the play. Got fresh alpha? 👀",
+                "my_account": "👤 Your TinyPilot Account Dashboard\n\nManage your trader wallet, check your portfolio, monitor your referral rewards, and track your funds — all in one place.\n\n🔐 Your Trader Wallet\n\nWallet Address: {wallet_address}\nBaseScan Link: {basescan_link}\n\n👥 Your Referral Rewards\n\n🧾 Fren 1 (Direct Invites): {count_depth_1}\n🧾 Fren 2: {count_depth_2}\n🧾 Fren 3: {count_depth_3}\n🧾 Fren 4: {count_depth_4}\n🧾 Fren 5: {count_depth_5}\n\n💰 Total Earnings: {total_fee} ETH\n\n💸 Claimable Rewards: {unclaimed} ETH\n\n✅ Claimed Rewards: {claimed} ETH",
+                "security_check": "Need more information about a token? Share with me the contract address so that we can dive in."
+            },
+            "buttons": {
+                "create_wallet": "🎮 Create Trader Wallet",
+                "manage_wallet": "Manage your wallet",
+                "manage_account": "⚙️ Manage Your Account",
+                "guide_book": "📚 View Guide Book",
+                "token_data": "👀 Ask for token data",
+                "wallet_data": "👀 Ask for wallet data",
+                "execute_trades": "🛒 Execute Trade Orders",
+                "share_referral": "📱 Share Referral",
+                "reveal_private_keys": "🗝️ Reveal My Private Key",
+                "withdraw_funds": "📤 Withdraw My Funds",
+                "portfolio_details": "🏦 My Portfolio Details",
+                "my_referral_link": " 🔗 My Referral Link"
+            },
+            "errors": {
+                "no_wallet": {
+                    "manage_wallet": "You need a Trader Wallet before making a deposit or withdraw. Create Trader Wallet to get started!",
+                    "my_wallet": "You don’t have a Trader Wallet. Create Trader Wallet to get started!",
+                    "execute_trades": "Executing trade orders is only available for users with a Trader Wallet. Create Trader Wallet to get started!"
+                }
+            }
+        },
+        "referral": {
+            "label": "👀 Ready to invite frens and earn rewards?\n    \nEvery time someone joins TinyPilot through your link and trades, you earn a share of their fees — up to 5 levels deep! {referral_link}",
+            "guide": "📊 Tiny Trader Referral Program\n\nEarn ETH rewards when your referrals trade!\n\nFren 1 (Direct Invite): Earn 30% of their trading fees\n\nFren 2: Earn 4% of their trading fees\n\nFren 3: Earn 3% of their trading fees\n\nFren 4: Earn 2% of their trading fees\n\nFren 5: Earn 1% of their trading fees\n\nMaximum earnings are from 5 levels deep! Start inviting now.\n\n{referral_link}"
+        },
+        "transaction": {
+            "approve_label": "Approve",
+            "cancel_label": "Cancel",
+            "cancel_question": "You canceled this order. How would you like to proceed?",
+            "buy_approve": "✅  Confirm Buy Order\n\n↙️ You buy\n{amount} ${ticker}\n{usd_value}\n\n↗️ You sell\n{sell_amount} $ETH\n${sell_usd_value}\n\nℹ️ Details\n1 ${ticker} = {single_sell_amount} ({single_usd_value})\nNetwork fee: <0.01\n\nPlease approve to continue.",
+            "sell_approve": "✅  Confirm Sell Order\n\n↗️ You sell\n{amount} ${ticker}\n{usd_value}\n\n↙️ You buy\n{sell_amount} $ETH\n${sell_usd_value}\n\nℹ️ Details\n1 ${ticker} = {single_sell_amount} ({single_usd_value})\nNetwork fee: <0.01\n\nPlease approve to continue.",
+            "swap_approve": "✅  Confirm Swap Order\n\n↗️  You sell\n{amount} ${ticker}\n{usd_value}\n\n↙️ You buy\n{sell_amount} ${to_ticker}\n${sell_usd_value}\n\nℹ️ Details\n1 ${ticker} = {single_sell_amount} ({single_usd_value})\nNetwork fee: <0.01\n\nPlease approve to continue.",
+            "withdraw_approve": "✅ Confirm Withdraw Order\n\n↗️ You send\n{amount} ${ticker}\n{usd_value}\n\n👤 To following address\n{wallet_provider}\n\nPlease approve to continue."
+        },
+        "transaction_loading": {
+            "withdraw": "↗️ Withdrawing funds… ",
+            "swap": "↗️ Executing swap order...",
+            "buy": "↗️ Executing buy order...",
+            "sell": "↗️ Executing sell order..."
+        },
+        "messages": {
+            "general_message": "Ai assistant could not understand question"
+        },
+        "errors": {
+            "user_not_found": "User not found",
+            "general_error": "Error occured on server",
+            "invalid_name": " Invalid wallet address or username! Please enter a valid wallet address, ENS name, or Farcaster username.",
+            "overload": "Unable to fetch wallet data due to high network load. Please try again later!",
+            "invalid_token": " Invalid Token! I couldn't find any data for this token. Please check the ticker or contract address and try again.",
+            "invalid_contract_address": " Invalid Contract Address! The contract address you provided is not a token contract address. Please fix it and continue.",
+            "not_enough_date": "Not Enough Data! This token is too new, please check again later.",
+            "data_not_available": " Data Not Available! We do not have sufficient historical data for this token.",
+            "wallet_empty": "Empty Wallet! This wallet appears to be inactive or has no holdings.",
+            "recent_transactions": "No Recent Transactions! This wallet has not traded in the last {inactive_days} days.",
+            "no_balance": "You don’t have enough balance to {transaction_type} tokens. Deposit funds into your Trader Wallet first!",
+            "invalid_withdrawal_target": " Invalid withdrawal target! You cannot withdraw funds to a contract address. Please provide a valid wallet address, ENS, or Farcaster username.",
+            "invalid_wallet_address": "Invalid wallet address! Please check the address and try again",
+            "ticker_not_included": "I couldn’t find any data for this token in my system. It might be too new or not yet listed in my sources. Please try again using the token’s contract address (CA) instead of the ticker symbol.",
+            "invalid_ens_name": "The ENS name you entered is not valid or does not resolve to an address. Please check and try again.",
+            "invalid_f_name": "The Farcaster username you entered does not exist. Please verify the username and try again."
+        },
+        "error_codes": {
+            "UNSUPPORTED_OPERATION": "This action isn’t supported by the network or wallet. Please try a different operation.",
+            "INSUFFICIENT_FUNDS": "You don’t have enough funds to complete this transaction.",
+            "NONCE_EXPIRED": "Your transaction nonce has expired. Please try again in a minute.",
+            "REPLACEMENT_UNDERPRICED": "Your transaction has expired due to network traffic. Please try again.",
+            "TRANSACTION_REPLACED": "This transaction has been replaced by another one. No further action needed.",
+            "CALL_EXCEPTION": "The contract call failed. It might be an invalid function call or the contract rejected it. Please try again, and if the issue persists, contact the admins on the TinyLabs community chat: @tinylabscommunity",
+            "NETWORK_ERROR": "Connection error with the network. Please try again, and if the issue persists, contact the admins on the TinyLabs community chat: @tinylabscommunity",
+            "TIMEOUT": "The request timed out. Network might be congested. Please try again, and if the issue persists, contact the admins on the TinyLabs community chat: @tinylabscommunity",
+            "SERVER_ERROR": "The server returned an unexpected error. Please try again, and if the issue persists, contact the admins on the TinyLabs community chat: @tinylabscommunity",
+            "INVALID_ARGUMENT": "Something’s wrong with the data sent. Please check your input and try again.",
+            "INVALID_RESPONSE": "Received an invalid response from the network. Please try again.",
+            "UNPREDICTABLE_GAS_LIMIT": "Gas estimation failed. The transaction may fail or consume too much gas. If this transaction fails, try again later.",
+            "MISSING_NEW": "Contract instantiation failed. Internal developer error — please report this to the admins on the TinyLabs community chat: @tinylabscommunity",
+            "INVALID_SIGNATURE": "Signature is invalid or corrupted on this transaction. Please try again, and if the issue persists, contact the admins on the TinyLabs community chat: @tinylabscommunity",
+            "BAD_DATA": "Malformed or corrupted response from the contract. Please try again.",
+            "BAD_RESPONSE": "Unexpected response from the contract. Please try again.",
+            "UNSUPPORTED_NETWORK": "This network is not supported. Please switch to the Base network.",
+            "INVALID_ADDRESS": "The address you entered is invalid. Please check and try again.",
+            "MISSING_ARGUMENT": "A required parameter is missing. Please double-check your command.",
+            "UNCONFIGURED_NAME": "ENS or Farcaster username not found. Try using a wallet address instead.",
+            "SIGNING_ERROR": "Error while signing the transaction. Please try again, and if the issue persists, contact the admins on the TinyLabs community chat: @tinylabscommunity",
+            "NUMERIC_FAULT": "Numeric error occurred. Please check your input and try again."
+        },
+        "loadings": {
+            "analyze": "Analyzing {name}"
+        },
+        "results": {
+            "withdraw": "↗️ {amount} ${ticker} withdrawn from your wallet to {wallet}\n\nView Transaction: {basescan_link}",
+            "buy": "↙️ Successfully bought {amount} ${ticker}\n\n🔗 View Transaction: {basescan_link}",
+            "sell": "↙️ Successfully sold {amount} ${ticker}\n\n🔗 View Transaction: {basescan_link}",
+            "swap": "↔️ Successfully swapped {from_amount} ${from_ticker} to {to_amount} to ${to_ticker} \n\n🔗 View Transaction: {basescan_link}",
+            "general": "View Transaction: {basescan_link}",
+            "wallet_analyze": "Analysis of {@farcaster_id} or {ens_id} or {wallet_address}\n\n💼 Portfolio Value\n💰 ${total_dollar_amount} - {24h_dollar_amount_%_change}\n\n🔹Top Holdings\n${ticker} - ${dollar_value}\n${ticker} - ${dollar_value}\n${ticker} - ${dollar_value}\n${ticker} - ${dollar_value}\n${ticker} - ${dollar_value}\n\n🔹 Latest Buys\n🔄 ${ticker} - {token_ammount} \n${dollar_value_of_tokens}\n🗓️{YYYY-MM-DD HH:MM}\n\n🔄 ${ticker} - {token_ammount} \n${dollar_value_of_tokens}\n🗓️{YYYY-MM-DD HH:MM}\n\n🔄 ${ticker} - {token_ammount} \n${dollar_value_of_tokens}\n🗓️{YYYY-MM-DD HH:MM}\n\n🔄 ${ticker} - {token_ammount} \n${dollar_value_of_tokens}\n🗓️{YYYY-MM-DD HH:MM}\n\n🔄 ${ticker} - {token_ammount} \n${dollar_value_of_tokens}\n🗓️{YYYY-MM-DD HH:MM}",
+            "analyze": "Analysis of {name}\n\n💼 Portfolio value\n\n💰{total_dollar_amount}\t{24h_dollar_amount_change}\n\n🔹Top Holdings\n{holdings_map}\n\n🔹Latest Buys\n{buys_map}"
+        }
+    },
+    "prompts": {}
+}
