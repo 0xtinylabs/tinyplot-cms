@@ -14,7 +14,7 @@ const authOptions: NextAuthOptions = {
         },
         password: { label: "Şifre", type: "password" },
       },
-      async authorize(credentials, req) {
+      async authorize(credentials) {
         // Burada gerçek kullanıcı doğrulama mantığı olmalı
         // Örnek olarak sabit kullanıcı bilgileri kullanıyoruz
         // Gerçek uygulamada veritabanından doğrulanmalı
