@@ -2,10 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { language: string; filename: string } }
-) {
+export async function GET(request: NextRequest, { params }: any) {
   try {
     const p = await params;
     const filePath = path.join(
@@ -25,10 +22,7 @@ export async function GET(
   }
 }
 
-export async function PUT(
-  request: NextRequest,
-  { params }: { params: { language: string; filename: string } }
-) {
+export async function PUT(request: NextRequest, { params }: any) {
   try {
     const p = await params;
 

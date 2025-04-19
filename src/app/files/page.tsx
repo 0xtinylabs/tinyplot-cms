@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -22,7 +22,7 @@ interface FileData {
   i18n: I18nFile[];
 }
 
-export default function FilesManager() {
+function FilesManager() {
   const searchParams = useSearchParams();
   const tabFromUrl = searchParams.get("tab") as "ai" | "i18n" | null;
 
@@ -206,11 +206,15 @@ export default function FilesManager() {
               {fileData?.ai && fileData.ai.length > 0 ? (
                 <div className="grid grid-cols-1 gap-4">
                   <div className="flex flex-wrap gap-2">
-                    {fileData.ai.map((file) => (
+                    {fileData.ai.map((file: any) => (
                       <Button
-                        key={file}
-                        variant={currentAIFile === file ? "default" : "outline"}
-                        onClick={() => handleAIFileClick(file)}
+                        key={file as any}
+                        variant={
+                          (currentAIFile as any) === file
+                            ? "default"
+                            : "outline"
+                        }
+                        onClick={() => handleAIFileClick(file as any)}
                       >
                         {file}
                       </Button>
@@ -289,5 +293,13 @@ export default function FilesManager() {
 
       <Toaster position="bottom-right" />
     </div>
+  );
+}
+
+export default function FileManagerPage() {
+  return (
+    <Suspense>
+      <FilesManager />
+    </Suspense>
   );
 }

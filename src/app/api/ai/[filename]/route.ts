@@ -2,10 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
 
-export async function GET(
-  request: NextRequest,
-  context: { params: { filename: string } }
-) {
+export async function GET(request: NextRequest, context: any) {
   try {
     const { filename } = await context.params;
     const filePath = path.join(process.cwd(), "src", "files", "ai", filename);
@@ -18,10 +15,7 @@ export async function GET(
   }
 }
 
-export async function PUT(
-  request: NextRequest,
-  context: { params: { filename: string } }
-) {
+export async function PUT(request: NextRequest, context: any) {
   try {
     const { content } = await request.json();
     const { filename } = await context.params;

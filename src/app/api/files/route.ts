@@ -13,7 +13,7 @@ export async function GET() {
     const i18nDir = path.join(baseDir, "i18n");
     const i18nLangs = await fs.readdir(i18nDir);
 
-    const i18nFiles = [];
+    const i18nFiles: any[] = [];
     for (const lang of i18nLangs) {
       const langPath = path.join(i18nDir, lang);
       const stat = await fs.stat(langPath);
