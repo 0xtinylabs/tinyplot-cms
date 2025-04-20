@@ -15,6 +15,18 @@ const eslintConfig = [
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
     },
+    ignorePatterns: [
+      "src/generated",
+      "node_modules/",
+      "build/",
+      "dist/",
+      "coverage/",
+      ".next/",
+      ".turbo/",
+      "out/",
+      "public/",
+      "scripts/",
+    ],
   }),
 ];
 
