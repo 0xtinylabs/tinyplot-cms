@@ -15,6 +15,7 @@ interface CodeEditorProps {
   value: string;
   onChange: (value: string) => void;
   onSave: () => Promise<void>;
+  onReset: () => Promise<void>;
   language?: string;
   height?: string;
   loading?: boolean;
@@ -24,6 +25,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
   value,
   onChange,
   onSave,
+  onReset,
   language = "typescript",
   height = "500px",
   loading = false,
@@ -79,6 +81,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
         )}
       </div>
       <div className="flex justify-end p-4 bg-gray-50 dark:bg-gray-900">
+        <Button onClick={onReset}>Reset File</Button>
         <Button
           onClick={handleSave}
           disabled={loading || saving}

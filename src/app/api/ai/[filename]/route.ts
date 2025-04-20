@@ -27,8 +27,16 @@ export async function GET(request: NextRequest, context: any) {
 
 export async function PUT(request: NextRequest, context: any) {
   try {
-    const { content } = await request.json();
+    const { content, reset } = await request.json();
     const { filename } = await context.params;
+
+    if (reset) {
+      const filePath = path.join(process.cwd(), "src", "files", "ai", filename);
+
+      const content = await fs.readFile(filePath, "utf-8");
+      await saveFile(filename, content);
+      return NextResponse.json({ success: true, content: content });
+    }
 
     await saveFile(filename, content);
 

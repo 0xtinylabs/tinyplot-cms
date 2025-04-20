@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import CodeEditor from "@/components/CodeEditor";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Toaster } from "sonner";
+import { toast, Toaster } from "sonner";
 
 interface AIFile {
   name: string;
@@ -106,6 +106,63 @@ function FilesManager() {
         currentI18nFile.filename,
         fileContent
       );
+    }
+  };
+
+  const resetCurrentFile = async () => {
+    try {
+      if (activeTab === "ai" && currentAIFile) {
+        await resetAIFileContent(currentAIFile);
+      } else if (activeTab === "i18n" && currentI18nFile) {
+        await resetI18nFileContent(
+          currentI18nFile.filename,
+          currentI18nFile.language
+        );
+      }
+      toast.success("File reseted successfully");
+    } catch {
+      toast.error("File could not reset");
+    }
+  };
+
+  const resetI18nFileContent = async (filename: string, language: string) => {
+    if (currentI18nFile) {
+      try {
+        const response = await fetch(`/api/i18n/${language}/${filename}`, {
+          method: "PUT",
+          body: JSON.stringify({ reset: true }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        if (!response.ok) {
+          throw new Error("Failed to reset file");
+        }
+        const data = await response.json();
+        setFileContent(data.content);
+      } catch (error) {
+        console.error("Error resetting i18n file content:", error);
+      }
+    }
+  };
+
+  const resetAIFileContent = async (filename: string) => {
+    try {
+      const response = await fetch(`/api/ai/${filename}`, {
+        method: "PUT",
+        body: JSON.stringify({ reset: true }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      if (!response.ok) {
+        throw new Error("Failed to reset file");
+      }
+      const data = await response.json();
+      setFileContent(data.content);
+    } catch (error) {
+      console.error("Error resetting AI file content:", error);
+      throw error;
     }
   };
 
@@ -229,6 +286,7 @@ function FilesManager() {
                       </h3>
                       <CodeEditor
                         value={fileContent}
+                        onReset={resetCurrentFile}
                         onChange={setFileContent}
                         onSave={saveCurrentFile}
                         language={getFileLanguage(currentAIFile)}
@@ -274,6 +332,7 @@ function FilesManager() {
                       <CodeEditor
                         value={fileContent}
                         onChange={setFileContent}
+                        onReset={resetCurrentFile}
                         onSave={saveCurrentFile}
                         language={getFileLanguage(currentI18nFile.filename)}
                         loading={loading}
