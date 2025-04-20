@@ -1,12 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
+import { connect, getFile, isExist, saveFile } from "@/db/db";
+
+connect();
 
 export async function GET(request: NextRequest, context: any) {
   try {
     const { filename } = await context.params;
+    let content;
+
     const filePath = path.join(process.cwd(), "src", "files", "ai", filename);
-    const content = await fs.readFile(filePath, "utf-8");
+    const isFileExist = await isExist(filename);
+    if (!isFileExist) {
+      content = await fs.readFile(filePath, "utf-8");
+    } else {
+      content = await getFile(filename);
+    }
 
     return NextResponse.json({ content });
   } catch (error) {
@@ -19,9 +29,8 @@ export async function PUT(request: NextRequest, context: any) {
   try {
     const { content } = await request.json();
     const { filename } = await context.params;
-    const filePath = path.join(process.cwd(), "src", "files", "ai", filename);
 
-    await fs.writeFile(filePath, content);
+    await saveFile(filename, content);
 
     return NextResponse.json({ success: true });
   } catch (error) {
