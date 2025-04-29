@@ -1,0 +1,181 @@
+{
+    "bot": {
+        "loading": {
+            "calling": "Düşünüyorum..."
+        },
+        "modes_definition": "$t(data.bot.guide)",
+        "guide": "1. What is TinyPilot?\n\nTinyPilot is a natural language based super agent that helps you analyze Based tokens and wallets, manage funds, and execute onchain trades — all via chat inside Telegram.\n\n 2. Is TinyPilot safe to use?\n\n TinyPilot uses Privy's embedded wallet architecture. This allows for your trader wallet to be fully self-custodial while allowing Slate to execute prompts on your behalf.  You should export your private key and store it securely offline when you create your trader wallet, and never share your private key with others. Currently, TinyPilot is in alpha; it might crash or provide incorrect data. Always DYOR (Do Your Own Research) and take your own risk.\n\n 3. What networks are supported?\n\nOnly the Base network is supported for now.\n\n 4. What can I do with TinyPilot?\n\n- Analyze token and wallet data\n- Create and manage a trader wallet\n- Deposit, withdraw, and send funds\n- Buy, sell, and swap tokens\n- Invite others via referral links and earn rewards\n\n 5. How do I get started?\n\n Use /start or /my_account to generate your unique trader wallet. Without a wallet, you can't place trade orders — but you can still analyze tokens and wallets.\n\n 6. Can I have more than one wallet?\n\nNo. Each Telegram user can only have one wallet. Re-creation is not allowed yet.\n\n 7. Do I need to use commands all the time?\n\nEach command unlocks a different mode that activates specific data access. \nFor example: \n`/start` allows you to integrate the bot and access the quick menu.\n/my_account allows you to access your wallet address and private key, the assets you hold in your trader wallet, the usage statistics of your referral link, perform deposit and withdraw transactions.\n`/my_portfolio` allows you to access the assets you hold in your wallet.\n`/trending_tokens` allows you to fetch curated Hot and Top trending Clanker tokens provided by ClankFun.\n\n 8. Where can I find my wallet address or my wallet’s private key?\n\nAsk TinyPilot to get your wallet address and its private key or use the /my_account command to view your address and its private key.\n\n 9. Can I view my wallet’s transaction history?\n\nAsk TinyPilot to get your wallet address and its private key or use /my_account command. You'll get the BaseScan link of your wallet.\n\n 10. How can I deposit funds into my wallet?\n\nAsk TinyPilot to get your wallet address or use /my_account to receive your deposit address. We recommend depositing ETH to cover network fees.\n\n 11. Can I send tokens to others?\n\nYes. You can send tokens to:\n\n- Wallet address (e.g., `0x123...456`)\n- ENS name (e.g., `tinylabs.eth`)\n- Farcaster username (e.g., `yourfriend`)\n- Telegram username (e.g., `@yourfriend`)\n\n 12. Can I withdraw my funds?\n\nYes. You can withdraw at any time. A quick reminder that TinyPilot does not support cross-chain transfers.\n\n 13. What token-related questions can I ask?\n\n- “What is $TOKEN’s price?”\n- “Show $TOKEN’s MCAP, FDV, and liquidity.”\n- “How did $TOKEN perform in the last 24h?”\n- “Who are the top 10 holders of $TOKEN?”\n- “What’s $TOKEN’s Uniswap/GeckoTerminal link?”\n\n 14. What wallet-related questions can I ask?\n\n- “Does jessepollak.eth hold $TOKEN?”\n- “Show sencrazy.eth’s top trades this week.”\n- “What’s the portfolio value of 0x123…45?”\n\n 15. How do I buy tokens?\n\n- “Buy 100 $TOKEN”\n- “Buy $100 worth of $TOKEN”\n- “Buy $TOKEN with 25% of my ETH”\n\n 16. How do I sell tokens?\n\n- “Sell 100 $TOKEN”\n- “Sell $TOKEN worth $50”\n\n 17. How do I swap tokens?\n\n“Swap 100 $TOKENA to $TOKENB”\n- “Swap 50% of my $TOKEN to $TOKENB”\n\n 18. How do referrals work?\n\nEach user has a unique invite link. When someone joins via your link:\n\n- You earn 30% of their trading fees\n- They get a 10% fee discount (1% → 0.9%)\n\n 19. What’s the reward breakdown?\n\n- Fren 1: 30%\n- Fren 2: 4%\n- Fren 3: 3%\n- Fren 4: 2%\n- Fren 5: 1%\n\n 20. Can I change my referral code?\n\nNo. Once set, your referral code is permanent.\n\n 21. What’s the minimum reward I need to claim referral earnings?\n\nMinimum claimable reward is `0.1 ETH`.\n\n 22. Which 3rd party data providers does TinyPilot use?\n\n- Privy\n- CoinGecko\n- Birdeye\n- Moralis\n- Neynar\n- ClankFun\n- Checkr\n- Clanker\n\n 23. I encountered an error. What should I do?\n\nRetry later, and if you continue to experience the same issue, contact support through the TinyLabs community: https://t.me/tinylabscommunity\n\n 24. Can I use TinyPilot in my group chat?\n\nYes! TinyPilot works in group chats as well as DMs. In groups, it can respond to queries using the same command system. However, TinyPilot has limited features for group chat usage.\n\n 25. Can I add TinyPilot in my group chat?\n\nAbsolutely. Add the bot like any other Telegram bot.\n\n 26. Who has access to my Trader Wallet?\n\nOnly you have access to your Trader Wallet. The wallet is created and mapped to your Telegram ID. No one else can access it unless you share your private key. Your private keys are encrypted and stored securely.\n\n 27. Where is my private key stored?\n\nThe private key is securely encrypted and is only shared with you if explicitly requested.\n\n 28. What happens if I delete the bot or clear chat?\n\nYour wallet remains intact and recoverable via your Telegram account. Deleting chat history does not delete your wallet or data.\n\n 29. What happens if I delete or lost my Telegram account?\n\nYour wallet remains intact and recoverable via your Telegram account. Deleting or losing your Telegram account will cut off access to your wallet. That’s why we suggest revealing your private key and storing it securely to maintain access to your wallet without TinyPilot.\n\n 30. Why is my trade/query taking longer than expected?\n\nThis may occur due to Base network congestion or gas fluctuations. All transactions or queries go through validation, signature, submission, and confirmation steps.\n\n 31. Does TinyPilot support other languages?\n\nCurrently, English is the default supported language. More language support will be introduced in future versions.\n\n 32. How can I follow product updates? Are there any official social links for the project?\n\nTinyPilot is built by TinyLabs. TinyLabs is a venture studio that builds on-chain AI products. Here are our official links where you can reach us or follow to stay updated:\n\nX: https://x.com/0xtinylabs \n\nTelegram: https://t.me/tinylabscommunity \n\nFarcaster: https://warpcast.com/tinylabs",
+        "bot_description": "🎊 Welcome to TinyPilot – Your AI Trading Assistant\n\nTinyPilot is your personal AI super agent built for on-chain trading and analysis — right here in Telegram.\n\nJust chat with it like you would with a friend, and it can help you:\n\n📊 Fetch on-chain data on any token or wallet\n\n🔄 Trade tokens directly via chat\n\n🎁 Share your referral link and earn rewards across 5 tiers",
+        "welcome_message": "GM ser! TinyPilot olarak, on-chain trade ve analiz konusunda sana yardımcı olmak için buradayım.\n\nBana arkadaşınla sohbet edermiş gibi yaz, sana yardımcı olacağım. Her zaman aktifim, her zaman öğreniyorum ve sana daha akıllıca ve hızlı trade yapman için yardımcı olmak üzere varım.\n\nBana şunları sorabilirsin:\n\n➡️ “0.1 ETH ile $SMOL al”\n\n➡️ “Tüm $ETH bakiyemi $DRB’ye çevir”\n\n➡️ “Vitalik.eth, $CLANKER tutuyor mu?”\n\n➡️ “Jessepollak bugün hangi tokenleri aldı?”\n\n➡️ “1K $SMOL’ü @yourfriend’a gönder”\n\n➡️ “$DRB’nin 24 saatlik ticaret performansı nedir?”\n\n⚠️ TinyPilot alpha versiyonunda. Çökmeler, hatalar yapabilir veya yanlış veriler verebilir. Her zaman kendi araştırmanızı yapın ve küçük bir bakiyeyle deneyin.",
+        "wallet": {
+            "create_group": "DM'inde gönderdim 👀",
+            "portfolio": "📋 Portföy Detayların\n\n🔹 Portföy Değeri\n💰 ${total_amount}\n\n🔹En Büyük Varlıklar\n\n{top_holdings}\nTam işlem geçmişini Basescan üzerinden görüntüleyebilirsin:\n\n🔗 Basescan'de Görüntüle: {basescan_link}",
+            "create_label": "Trader Cüzdanı Oluştur",
+            "private_keys_label": "Özel Anahtarları Göster",
+            "private_key_group": "⚠️ Uyarı: Özel anahtarın, Trader Cüzdanına tam erişim sağlar. Bunu kamu grubunda paylaşamam ve asla özel anahtarını kimseyle paylaşmamalısın! Lütfen özel anahtarını DM'inde kontrol et.",
+            "delete_private_key_label": "Özel Anahtarı Sil",
+            "exist_wallet": "Hesabına bağlı bir Trader Cüzdanın zaten var. Her kullanıcı yalnızca bir Trader Cüzdanına sahip olabilir.",
+            "private_key": "⚠️ Uyarı: Özel anahtarın, Trader Cüzdanına tam erişim sağlar. Asla kimseyle paylaşma ve bu mesajı, özel anahtarını kopyaladıktan sonra sil!\n\n{private_key}",
+            "info": "⚠️ Uyarı: Özel anahtarın, Trader Cüzdanına tam erişim sağlar. Asla kimseyle paylaşma!\n\nTüccar cüzdanı oluşturman tamamlandı. Base ağındaki bu cüzdana $ETH yatırdığında, senin için ticaret yapmaya başlayacağım.\n\nMinimum yatırma miktarı 0.01 $ETH'dir. Fonlarını bu cüzdandan her zaman çekebilir veya bu cüzdanın özel anahtarını gösterebilirsin.\n\n{basescan_link}\n\n{wallet_address}",
+            "errors": {
+                "wallet_portfolio_empty": "{wallet_address} analizine bak\n\n🔹 Portföy Değeri\n\n💰 $0.00 – Son 24 saatte hiçbir işlem yapılmadı\n\n🔹 En Büyük Varlıklar\n\nBu cüzdanda şu anda hiçbir varlık bulunmuyor.\n\n📭 Görünüşe göre bu cüzdan boş. Trade yapmaya başlarsan veya fon alırsan, varlıkların burada görünecek.\n\nİşlem geçmişini hala Basescan üzerinden görüntüleyebilirsin:\n\n🔗 Basescan'de Görüntüle: {basescan_link}",
+                "wallet_create": "Trader Cüzdanını oluştururken bir hata oluştu. Lütfen daha sonra tekrar deneyin veya destekle iletişime geçin."
+            }
+        },
+        "modes": {
+            "deposit_manuel": "Yatırım yapmak için cüzdan adresiniz şudur:",
+            "invalid_prompt": "Bu mod bu soruyu desteklemiyor: {question}\n\nLütfen doğru modu kullanın."
+        },
+        "extras": {
+            "greetings": {
+                "guide_book": "İşte TinyPilot hakkında daha fazla bilgi edinebileceğiniz, nasıl daha verimli kullanabileceğinizi öğrenebileceğiniz ve TinyPilot ile iletişiminizi geliştirecek bazı prompt örnekleri bulabileceğiniz kılavuzumuz:\n\n{guidebook_link}",
+                "withdraw_funds": "Anladım. Lütfen bu bakiye transfer detaylarını tek bir mesajda ver:\n\n1. Nereye transfer etmek istiyorsun?\n2. Hangi varlığı transfer etmek istiyorsun?\n3. Ne kadar transfer etmek istiyorsun?"
+            }
+        },
+        "menu": {
+            "start": "Start to integrate with bot",
+            "create_wallet": "Create a trader wallet",
+            "my_wallet": "Get your wallet info",
+            "manage_wallet": "Deposit and withdraw funds",
+            "token_data": "Get advance token data",
+            "wallet_data": "Get advance wallet data",
+            "execute_trades": "Let AI trade for you",
+            "my_referral": "Share your referral link",
+            "my_portfolio": "Check your wallet portfolio",
+            "security_check": "Audit check a token",
+            "my_account": "Your TinyPilot Account Dashboard",
+            "trending_tokens": "Top and Hot Clanker tokens",
+            "greetings": {
+                "trending_tokens": "🤑 TOP Clanker Token'ları (24s)\n\n{trending_tokens}\n\n🔥 HOT Clanker Token'ları (24s)\n\n{hot_tokens}\n\nℹ️ Bu derlenmiş liste, on-chain token verilerine dayalı olarak ClankFun tarafından sağlanmaktadır. Her zaman işlem yapmadan önce kendi araştırmanı yap.",
+                "my_referral": "📊 Referral Kazanç Dağılımı\n\nFren 1 (Doğrudan Davetler): {count}\n\nFren 2: {count}\n\nFren 3: {count}\n\nFren 4: {count}\n\nFren 5: {count}\n\nToplam Kazançlar: {total_rewards} WETH\n\nTalep Edilebilir Ödüller: {claimable_rewards} WETH\n\nTalep Edilen Ödüller: {claimed_rewards} WETH",
+                "manage_wallet": "Anladım, cüzdan yönetim modu: etkinleştirildi! Ne yapmak istersin? Yatırım mı yapacaksın yoksa çekecek misin? 👀",
+                "token_data": "Hangi token ilgini çekiyor?",
+                "wallet_data": "Cüzdan adresi, ENS ismini, Telegram kullanıcı adını ya da Farcaster kullanıcı adını ver, bakalım ne varmış.",
+                "execute_trades": "Swap butonuna basmaya hazırım, ser! Planını bana söyle. Yeni alfa var mı? 👀",
+                "my_account": "👤 TinyPilot Hesap Gösterge Tablosu\n\nTrader cüzdanını yönet, portföyünü kontrol et, referral ödüllerini izle ve fonlarını takip et — hepsi bir arada.\n\n🔐 Trader Cüzdanın\n\nCüzdan Adresi: {wallet_address}\nBaseScan Linki: {basescan_link}\n\n👥 Referral Ödüllerin\n\n🧾 Fren 1 (Doğrudan Davetler): {count_depth_1}\n🧾 Fren 2: {count_depth_2}\n🧾 Fren 3: {count_depth_3}\n🧾 Fren 4: {count_depth_4}\n🧾 Fren 5: {count_depth_5}\n\n💰 Toplam Kazançlar: {total_fee} ETH\n\n💸 Çekilebilir Ödüller: {unclaimed} ETH\n\n✅ Çekilen Ödüller: {claimed} ETH",
+                "security_check": "Bir token hakkında daha fazla bilgiye mi ihtiyacın var? Sözleşme adresini paylaş, böylece derinlemesine inceleyebiliriz."
+            },
+            "buttons": {
+                "create_wallet": "🎮 Trader Cüzdanı Oluştur",
+                "manage_wallet": "Cüzdanımı Yönet",
+                "manage_account": "⚙️ Hesabımı Yönet",
+                "guide_book": "📚 Kılavuzu Görüntüle",
+                "token_data": "👀 Token verilerini sor",
+                "wallet_data": "👀 Cüzdan verilerini sor",
+                "execute_trades": "🛒 Trade Emirlerini Gerçekleştir",
+                "share_referral": "📱 Referral’ımı Paylaş",
+                "reveal_private_keys": "🗝️ Özel Anahtarımı Göster",
+                "withdraw_funds": "📤 Fonlarımı Çek",
+                "portfolio_details": "🏦 Portföy Detaylarım",
+                "my_referral_link": " 🔗 Referral Linkim"
+            },
+            "errors": {
+                "no_wallet": {
+                    "manage_wallet": "Yatırım yapmak veya çekim yapmak için önce bir Trader Cüzdanına ihtiyacınız var. Başlamak için Trader Cüzdanı oluşturun!",
+                    "my_wallet": "Bir Trader Cüzdanınız yok. Başlamak için Trader Cüzdanı oluşturun!",
+                    "execute_trades": "Ticaret emirlerini gerçekleştirmek yalnızca Trader Cüzdanı olan kullanıcılar için geçerlidir. Başlamak için Trader Cüzdanı oluşturun!"
+                }
+            }
+        },
+        "referral": {
+            "label": "Arkadaşlarını davet etmeye ve ödüller kazanmaya hazır mısın? 👀\n    \nBirisi, senin referans linkin üzerinden TinyPilot'a katıldığında ve trade yaptığında, onun işlem ücretlerinden ve arkadaşlarının davet ettiklerinin işlem ücretlerinden referans payı alırsın. Üstelik bu komisyon paylaşımı 5 seviyeye kadar devam eder. {referral_link}",
+            "group": "İşte referans davet linkin: {referral_link}\nBu link üzerinden katılan herkes, her trade işlemelerinde ömür boyu %10 komisyon indirimi alacak.",
+            "guide": "📊 Tiny Trader Referans Programı\n\nReferanslarınız trade yaptığında ETH ödülleri kazanırsın.\n\nSeviye 1 Referans (Doğrudan Davet): Trade komisyon ücretlerinin %30'unu kazanırsın\n\nSeviye 2 Referans: Trade komisyon ücretlerinin %4'ünü kazanırsın\n\nSeviye 3 Referans: Trade komisyon ücretlerinin %3'ünü kazanırsın\n\nSeviye 4 Referans: Trade komisyon ücretlerinin %2'sini kazanırsın\n\nSeviye 5 Referans: Trade komisyon ücretlerinin %1'ini kazanırsın\n\nMaksimum kazanç 5 seviyelidir. Referans linkin ile hemen şimdi davet etmeye başlayabilirsin.\n\n{referral_link}"
+        },
+        "transaction": {
+            "approve_label": "Onayla",
+            "approve_label_group": "İşlem detaylarını onayınız için DM üzerinden gönderdim. Lütfen kontrol edin ve her şeyin doğru olduğunu onaylayın.",
+            "cancel_label": "İptal",
+            "cancel_question": "Bu işlemi iptal ettin. Nasıl devam etmek istersin?",
+            "buy_approve": "✅  Alım Emrini Onayla\n\n↙️ Alınan\n{amount} ${ticker}\n{usd_value}\n\n↗️ Satılan\n{sell_amount} $ETH\n${sell_usd_value}\n\nℹ️ Detaylar\n1 ${ticker} = {single_sell_amount} ({single_usd_value})\nAğ ücreti: <0.01\n\nDevam etmek için lütfen onaylayın.",
+            "sell_approve": "✅  Satış Emrini Onayla\n\n↗️ Satılan\n{amount} ${ticker}\n{usd_value}\n\n↙️ Alınan\n{sell_amount} $ETH\n${sell_usd_value}\n\nℹ️ Detaylar\n1 ${ticker} = {single_sell_amount} ({single_usd_value})\nAğ ücreti: <0.01\n\nDevam etmek için lütfen onaylayın.",
+            "swap_approve": "✅  Takas Emrini Onayla\n\n↗️  Satılan\n{amount} ${ticker}\n{usd_value}\n\n↙️ Alınan\n{sell_amount} ${to_ticker}\n${sell_usd_value}\n\nℹ️ Detaylar\n1 ${ticker} = {single_sell_amount} ({single_usd_value})\nAğ ücreti: <0.01\n\nDevam etmek için lütfen onaylayın.",
+            "withdraw_approve": "✅  Bakiye Çekme Emrini Onayla\n\n↗️ Gönderilen miktar{amount} ${ticker}\n{usd_value}\n\n👤 Gönderilen Adres\n{wallet_provider}\n\nDevam etmek için lütfen onaylayın."
+        },
+        "transaction_loading": {
+            "withdraw": "↗️ Bakiye gönderiliyor… ",
+            "swap": "↗️ Takas işlemi gerçekleşiyor...",
+            "buy": "↗️ Alım işlemi gerçekleşiyor...",
+            "sell": "↗️ Satış işlemi gerçekleşiyor..."
+        },
+        "messages": {
+            "general_message": "Bu sorduğunu anlamadım."
+        },
+        "errors": {
+            "user_not_found": "Kullanıcı bulunamadı. Lütfen kontrol edin ve doğru kullanıcıyı belirttiğinizden emin olun.",
+            "general_error": "Bir sunucu hatası oluştu. Lütfen tekrar deneyin, eğer sorun devam ederse birkaç dakika bekleyip tekrar deneyin.",
+            "invalid_name": "Geçersiz cüzdan adresi veya kullanıcı adı girdiniz! Lütfen geçerli bir cüzdan adresi, ENS adı, Farcaster kullanıcı adı veya Telegram kullanıcı adı girin.",
+            "overload": "Geçersiz token! Bu token için veri bulunamadı. Lütfen ticker veya sözleşme adresini kontrol edin ve tekrar deneyin.",
+            "invalid_token": "Geçersiz Token! Bu token için herhangi bir veri bulamadım. Lütfen ticker veya sözleşme adresini kontrol edin ve tekrar deneyin.",
+            "invalid_contract_address": "Geçersiz Sözleşme Adresi! Verdiğiniz sözleşme adresi bir token sözleşmesi adresi değil. Lütfen düzeltin ve devam edin.",
+            "not_enough_date": "Yeterli Veri Yok! Bu token çok yeni, lütfen daha sonra tekrar kontrol edin.",
+            "data_not_available": "Veri Mevcut Değil! Bu token için yeterli tarihsel veriye sahip değiliz.",
+            "wallet_empty": "Boş Cüzdan! Bu cüzdan görünüşe göre etkin değil veya hiçbir varlık bulunmuyor.",
+            "recent_transactions": "Son İşlemler Yok. Bu cüzdan son {inactive_days} günde ticaret yapmamış.",
+            "no_balance": "Token {transaction_type} yapmak için yeterli bakiyeniz yok. Öncelikle Trader Cüzdanınıza fon yatırın!",
+            "invalid_withdrawal_target": "Geçersiz çekim hedefi! Fonları bir sözleşme adresine çekemezsiniz. Lütfen geçerli bir cüzdan adresi, ENS veya Farcaster kullanıcı adı sağlayın.",
+            "invalid_wallet_address": "Geçersiz cüzdan adresi. Lütfen adresi kontrol edin ve tekrar deneyin.",
+            "ticker_not_included": "Bu token için veri bulunamadı. Bu token çok yeni olabilir veya henüz listelenmemiştir. Token’ın sözleşme adresini (CA) kullanmayı deneyin.",
+            "invalid_ens_name": "Geçersiz ENS adı. ENS adı geçerli bir adrese çözülmüyor. Lütfen kontrol edin ve tekrar deneyin.",
+            "invalid_f_name": "Geçersiz Farcaster kullanıcı adı. Kullanıcı adı mevcut değil. Lütfen doğrulayın ve tekrar deneyin.",
+            "wallet_analyze": "Cüzdanı analiz edemedim. Lütfen tekrar deneyin.",
+            "telegram_user_has_no_wallet": "Görünüşe göre bu kullanıcı henüz TinyPilot kullanmıyor. Onlara referans linkinizle davet gönderebilir ve referans komisyon ödülleri kazanabilirsiniz.",
+            "multiple_wallets": "😢 Kısıtlama: Şu anda tek bir sorguda birden fazla işlem gerçekleştiremiyorum. Bunları tek tek deneyebilirsiniz. Bu özelliği bir an önce eklemeyi umuyorum.",
+            "no_user_for_given_provider": "Görünüşe göre bu kullanıcı henüz TinyPilot kullanmıyor. Onlara referral linkinizle davet gönderebilir ve referral ödülleri kazanabilirsiniz."
+        },
+        "error_codes": {
+            "UNSUPPORTED_OPERATION": "Bu işlem ağ veya cüzdan tarafından desteklenmiyor. Lütfen farklı bir işlem deneyin.",
+            "INSUFFICIENT_FUNDS": "Bu işlemi tamamlamak için yeterli bakiyeniz yok.",
+            "NONCE_EXPIRED": "İşlem nonce'ınız süresi dolmuş. Lütfen bir dakika sonra tekrar deneyin.",
+            "REPLACEMENT_UNDERPRICED": "İşleminiz ağ trafiği nedeniyle süresi doldu. Lütfen tekrar deneyin.",
+            "TRANSACTION_REPLACED": "Bu işlem başka bir işlemle değiştirildi. Başka bir işlem yapmanıza gerek yok.",
+            "CALL_EXCEPTION": "Sözleşme çağrısı başarısız oldu. Bu geçersiz bir fonksiyon çağrısı olabilir veya sözleşme reddetmiş olabilir. Lütfen tekrar deneyin, eğer sorun devam ederse TinyLabs topluluk sohbetinde yöneticilere ulaşın: @tinylabscommunity",
+            "NETWORK_ERROR": "Ağ ile bağlantı hatası oluştu. Lütfen tekrar deneyin, eğer sorun devam ederse TinyLabs topluluk sohbetinde yöneticilere ulaşın: @tinylabscommunity",
+            "TIMEOUT": "İstek zaman aşımına uğradı. Ağda tıkanıklık olabilir. Lütfen tekrar deneyin, eğer sorun devam ederse TinyLabs topluluk sohbetinde yöneticilere ulaşın: @tinylabscommunity",
+            "SERVER_ERROR": "Sunucu beklenmeyen bir hata döndürdü. Lütfen tekrar deneyin, eğer sorun devam ederse TinyLabs topluluk sohbetinde yöneticilere ulaşın: @tinylabscommunity",
+            "INVALID_ARGUMENT": "Gönderilen verilerde bir sorun var. Lütfen girişinizi kontrol edin ve tekrar deneyin.",
+            "INVALID_RESPONSE": "Ağdan geçersiz bir yanıt alındı. Lütfen tekrar deneyin.",
+            "UNPREDICTABLE_GAS_LIMIT": "Gas tahminlemesi başarısız oldu. İşlem başarısız olabilir veya çok fazla gas harcayabilir. Eğer işlem başarısız olursa, daha sonra tekrar deneyin.",
+            "MISSING_NEW": "Sözleşme başlatılamadı. Dahili geliştirici hatası — lütfen bunu TinyLabs topluluk sohbetine bildirin: @tinylabscommunity",
+            "INVALID_SIGNATURE": "İmza geçersiz veya bozulmuş. Lütfen tekrar deneyin, eğer sorun devam ederse TinyLabs topluluk sohbetinde yöneticilere ulaşın: @tinylabscommunity",
+            "BAD_DATA": "Sözleşmeden bozulmuş veya yanlış formatta bir yanıt alındı. Lütfen tekrar deneyin.",
+            "BAD_RESPONSE": "Sözleşmeden beklenmeyen bir yanıt alındı. Lütfen tekrar deneyin.",
+            "UNSUPPORTED_NETWORK": "Bu ağ desteklenmiyor. Lütfen Base ağını kullanın.",
+            "INVALID_ADDRESS": "Girdiğiniz adres geçersiz. Lütfen kontrol edin ve tekrar deneyin.",
+            "MISSING_ARGUMENT": "Gerekli bir parametre eksik. Lütfen komutunuzu bir kez daha kontrol edin.",
+            "UNCONFIGURED_NAME": "ENS veya Farcaster kullanıcı adı bulunamadı. Bunun yerine bir cüzdan adresi kullanmayı deneyin.",
+            "SIGNING_ERROR": "İşlem imzalanırken hata oluştu. Lütfen tekrar deneyin, eğer sorun devam ederse TinyLabs topluluk sohbetinde yöneticilere ulaşın: @tinylabscommunity",
+            "NUMERIC_FAULT": "Sayısal bir hata oluştu. Lütfen girişinizi kontrol edin ve tekrar deneyin."
+        },
+        "loadings": {
+            "analyze": "{name} analiz ediliyor"
+        },
+        "ai": {
+            "persona": {
+                "label": "Kişiselleştir",
+                "description": "Burada biraz kişiselleştirme eklemek istediğini görüyorum. Bana bir karakter persona atayabilirsin ve sohbetlerimizde bu persona üzerinden cevaplarımı şekillendirebilirim. Ancak bu özellik yalnızca DM sohbetlerinde kullanılabilir. Grup sohbetlerinde ise Varsayılan Karakter Persona'ma göre cevap vereceğim. İşte benim Varsayılan Karakter Persona'm:\n\n {current_persona}",
+                "new_label": "Yeni Persona Ata",
+                "reset_label": "Varsayılan Personaya Dön",
+                "reset_message": "Tamamdır, atadığınız karakter persona'sını sıfırlayıp varsayılan personaya döndüm.",
+                "new_message": "Tamamdır, bu değişikliğe hazırım. Bir karakter persona'sı verin, tek bir paragraf içinde olsun. Vereceğin metnin 450 karakterden kısa olmasına ve herhangi bir URL bağlantısı veya markdown kullanımından kaçınılmasına dikkat edin. Bu persona yalnızca mesajlaşma şeklimi etkileyecek, bu yüzden buna odaklanarak kısa bir prompt verebilirsin.",
+                "save_message": "Persona kaydedildi.",
+                "default": " ",
+                "check": {
+                    "message": "İşte sizin atadığınız karakter personası. Lütfen kontrol edin ve her şey doğruysa onaylayın.\n\n{new_persona}",
+                    "approve_label": "Onayla",
+                    "cancel_label": "İptal"
+                }
+            }
+        },
+        "results": {
+            "withdraw": "↗️ {amount} ${ticker} cüzdanınızdan {wallet} adresine transfer edildi.\n\nİşlemi Görüntüle: {basescan_link}",
+            "buy": "↙️ Başarıyla {amount} ${ticker} satın alındı.\n\n🔗 İşlemi Görüntüle: {basescan_link}",
+            "sell": "↙️ Başarıyla {amount} ${ticker} satıldı.\n\n🔗 İşlemi Görüntüle: {basescan_link}",
+            "swap": "↔️ Başarıyla {from_amount} ${from_ticker} - {to_amount} ${to_ticker} ile takas yapıldı\n\n🔗 İşlemi Görüntüle: {basescan_link}",
+            "general": "İşlemi görüntüle: {basescan_link}",
+            "wallet_analyze": "Cüzdan Analizi: {wallet_address}\n\n💼 Portföy Değeri\n💰 ${total_dollar_amount}\n\n🔹 En Büyük Varlıklar\n{top_holdings}\n\n🔹 Son İşlemler\n\n{latest_swaps}",
+            "analyze": "{name} Analizi\n\n💼 Portföy Değeri\n\n💰{total_dollar_amount}\t{24h_dollar_amount_change}\n\n🔹 En Büyük Varlıklar\n{holdings_map}\n\n🔹 Son Alımlar\n{buys_map}"
+        }
+    },
+    "prompts": {}
+}
